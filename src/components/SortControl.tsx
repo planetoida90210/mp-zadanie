@@ -30,7 +30,7 @@ const SortControl: React.FC<SortControlProps> = ({
   return (
     <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', marginBottom: 2 }}>
      
-      <FormControl variant="outlined" sx={{ minWidth: 120 }}>
+     <FormControl variant="outlined" sx={{ minWidth: 120, '.MuiInputLabel-root': { top: '-7px' }, '.MuiOutlinedInput-root': { alignItems: 'center' } }}>
         <InputLabel id="sort-by-label">Sortuj po</InputLabel>
         <Select
           labelId="sort-by-label"
@@ -45,7 +45,7 @@ const SortControl: React.FC<SortControlProps> = ({
         </Select>
       </FormControl>
      
-      <FormControl variant="outlined" sx={{ minWidth: 120 }}>
+      <FormControl variant="outlined" sx={{ minWidth: 120, '.MuiInputLabel-root': { top: '-7px' }, '.MuiOutlinedInput-root': { alignItems: 'center' } }}>
         <InputLabel id="page-size-label">Na stronie</InputLabel>
         <Select
           labelId="page-size-label"
@@ -59,7 +59,7 @@ const SortControl: React.FC<SortControlProps> = ({
           <MenuItem value={100}>100</MenuItem>
         </Select>
       </FormControl>
-      <IconButton onClick={onReset} aria-label="reset" sx={{ display: { xs: 'none', md: 'block' } }}>
+      <IconButton onClick={onReset} aria-label="reset">
         <RefreshIcon />
       </IconButton>
     </Box>

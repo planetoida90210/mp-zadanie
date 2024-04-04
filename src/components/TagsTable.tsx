@@ -8,7 +8,7 @@ import GridView from './GridView';
 
 export const TagsTable: React.FC = () => {
   const [page, setPage] = useState<number>(0);
-  const [pageSize, setPageSize] = useState<number>(30);
+  const [pageSize, setPageSize] = useState<number>(25);
   const [sortBy, setSortBy] = useState<string>('popular_desc');
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
 
@@ -21,9 +21,6 @@ export const TagsTable: React.FC = () => {
     setPage(0);
   };
 
-  const handleSortChange = (newSortBy: string) => {
-    setSortBy(newSortBy);
-  };
 
   const { data, isLoading, error } = useTags(page + 1, pageSize, sortBy);
 
@@ -55,6 +52,7 @@ export const TagsTable: React.FC = () => {
                 onPageChange={handleChangePage}
                 rowsPerPage={pageSize}
                 onRowsPerPageChange={handleChangeRowsPerPage}
+               
             />
         </>
     );

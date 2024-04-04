@@ -8,9 +8,9 @@ interface GridViewProps {
 
 const GridView: React.FC<GridViewProps> = ({ data }) => {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, pt: 2, pb: 2 }}>
       {data.map((tag) => (
-        <Card key={tag.name} sx={{ minWidth: 275, maxWidth: 300 }}>
+        <Card sx={{ width: { xs: '100%', sm: 275, md: 300 } }}>
           <CardContent>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
               Nazwa
